@@ -38,21 +38,21 @@ public class SecurityConfig {
 
 
 	
-//	@Bean
-//	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-//	 http
-//     .csrf(AbstractHttpConfigurer::disable)
-//			.authorizeHttpRequests(authorize -> authorize
-//					.requestMatchers("/user/**").hasRole("USER")
-//					.requestMatchers("/admin/**").hasRole("ADMIN") 
-//					.requestMatchers("/**").permitAll().anyRequest().authenticated()
-//			).formLogin(formLogin -> formLogin
-//					.loginPage("/signin") // Set your custom login page URL if needed
-//					.defaultSuccessUrl("/") // Set the default success URL after login
-//					.permitAll());
-//	 
-//		return http.build();
-//	}
+	@Bean
+	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+	 http
+    .csrf(AbstractHttpConfigurer::disable)
+			.authorizeHttpRequests(authorize -> authorize
+					.requestMatchers("/user/**").hasRole("USER")
+					.requestMatchers("/admin/**").hasRole("ADMIN") 
+					.requestMatchers("/**").permitAll().anyRequest().authenticated()
+			).formLogin(formLogin -> formLogin
+					.loginPage("/signin") // Set your custom login page URL if needed
+					.defaultSuccessUrl("/") // Set the default success URL after login
+					.permitAll());
+	 
+		return http.build();
+	}
 	
 	
 	
