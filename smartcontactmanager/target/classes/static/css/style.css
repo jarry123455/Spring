@@ -1,0 +1,40 @@
+@charset "ISO-8859-1";
+
+body {
+	background: #e2e2e2 !important;
+}
+
+.bg-primary {
+	background: #009688 !important;
+
+}
+
+.prop {
+	padding: 18px 18px;
+}
+
+.banner {
+	width: 100%;
+	height: 93vh;
+	background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/smart2.avif);
+	color: white;
+	background-size: cover;
+}
+.my-card{
+	padding: 20px;
+	background: white;
+}
+
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height:500px;
+  border: 1px solid #9C9C9C;
+  background-color: white;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
